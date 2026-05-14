@@ -225,7 +225,21 @@ rel_op → GE
 rel_op → EQ
 rel_op → NE
 ```
+## Выражение 
 
+```text
+expression → expression PLUS term
+expression → expression MINUS term
+expression → term
+```
+
+## Терм 
+
+```text
+term → term MUL factor
+term → term DIV factor
+term → factor
+```
 
 ## Множитель
 
@@ -244,4 +258,5 @@ function_call → function_name LPAREN expression RPAREN
 function_name → SQRT
 function_name → EXP
 function_name → LOG
+function_name → ARRAY
 ```
