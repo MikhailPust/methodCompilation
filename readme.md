@@ -132,3 +132,131 @@
 | `E` | другой | `Z*` | 3 | Просто `<` — вернуть символ, зафиксировать `LT` |
 | `H` | `=` | `K` | 2 | `>` + `=` → лексема `>=` — накопить и вернуть |
 | `H` | другой | `Z*` | 3 | Просто `>` — вернуть символ, зафиксировать `GT` |
+
+---
+
+# КС-грамматика языка
+
+Исходная контекстно-свободная грамматика. Терминалы — лексемы из списка лексем. Содержит левую рекурсию в правилах `expression` и `term` — это нормально для исходной грамматики, на следующем этапе она будет устранена.
+
+## Программа
+
+```text
+program → statement_list
+```
+
+## Список операторов
+
+```text
+statement_list → statement statement_list
+statement_list → ε
+```
+
+## Оператор
+
+```text
+statement → assignment
+statement → if_statement
+statement → while_statement
+statement → read_statement
+statement → write_statement
+statement → block
+```
+
+## Составной оператор (блок)
+
+```text
+block → LBRACE statement_list RBRACE
+```
+
+## Присваивание
+
+```text
+assignment → variable ASSIGN expression SEMICOLON
+```
+
+## Переменная
+
+```text
+variable → ID
+variable → ID LBRACKET expression RBRACKET
+```
+
+## Условный оператор
+
+```text
+if_statement → IF LPAREN condition RPAREN block else_part
+
+else_part → ELSE block
+else_part → ε
+```
+
+## Оператор цикла
+
+```text
+while_statement → WHILE LPAREN condition RPAREN block
+```
+
+## Оператор ввода
+
+```text
+read_statement → READ LPAREN variable RPAREN SEMICOLON
+```
+
+## Оператор вывода
+
+```text
+write_statement → WRITE LPAREN expression RPAREN SEMICOLON
+```
+
+## Условие
+
+```text
+condition → expression rel_op expression
+```
+
+## Операции сравнения
+
+```text
+rel_op → LT
+rel_op → GT
+rel_op → LE
+rel_op → GE
+rel_op → EQ
+rel_op → NE
+```
+
+## Выражение (левая рекурсия — будет устранена)
+
+```text
+expression → expression PLUS term
+expression → expression MINUS term
+expression → term
+```
+
+## Терм (левая рекурсия — будет устранена)
+
+```text
+term → term MUL factor
+term → term DIV factor
+term → factor
+```
+
+## Множитель
+
+```text
+factor → NUMBER
+factor → variable
+factor → LPAREN expression RPAREN
+factor → function_call
+```
+
+## Вызов функции
+
+```text
+function_call → function_name LPAREN expression RPAREN
+
+function_name → SQRT
+function_name → EXP
+function_name → LOG
+```
