@@ -260,3 +260,131 @@ function_name → EXP
 function_name → LOG
 function_name → ARRAY
 ```
+
+---
+
+# Устранение левой рекурсии
+
+Левая рекурсия возникает когда правило начинается само с себя — парсер уходит в бесконечный цикл ещё до чтения хоть одного токена. В данной грамматике она обнаружена в двух нетерминалах: `expression` и `term`.
+
+## Алгоритм
+
+Правила вида:
+
+```text
+A → A α₁
+A → A α₂
+A → β        ← база (не начинается с A)
+```
+
+Заменяются на:
+
+```text
+A  → β A'
+A' → α₁ A'
+A' → α₂ A'
+A' → ε
+```
+
+Вводится новый нетерминал `A'`, который берёт на себя повторяющийся хвост. База `β` идёт первой — рекурсии больше нет.
+
+---
+
+## Устранение в `expression`
+
+В исходной грамматике:
+
+```text
+expression → expression PLUS term    ← левая рекурсия
+expression → expression MINUS term   ← левая рекурсия
+expression → term                    ← база (β = term)
+```
+
+Применяем алгоритм — база `term` выносится вперёд, хвосты `PLUS term` и `MINUS term` уходят в `expression'`:
+
+```text
+expression  → term expression'
+expression' → PLUS term expression'
+expression' → MINUS term expression'
+expression' → ε
+```
+
+---
+
+## Устранение в `term`
+
+В исходной грамматике:
+
+```text
+term → term MUL factor    ← левая рекурсия
+term → term DIV factor    ← левая рекурсия
+term → factor             ← база (β = factor)
+```
+
+Применяем алгоритм — база `factor` выносится вперёд, хвосты `MUL factor` и `DIV factor` уходят в `term'`:
+
+```text
+term  → factor term'
+term' → MUL factor term'
+term' → DIV factor term'
+term' → ε
+```
+
+---
+
+# Итоговая грамматика без левой рекурсии
+
+```text
+program → statement_list
+
+statement_list → statement statement_list
+statement_list → ε
+
+statement → assignment
+statement → if_statement
+statement → while_statement
+statement → read_statement
+statement → write_statement
+statement → block
+
+block → LBRACE statement_list RBRACE
+
+assignment → variable ASSIGN expression SEMICOLON
+
+variable → ID
+variable → ID LBRACKET expression RBRACKET
+
+if_statement → IF LPAREN condition RPAREN block else_part
+
+else_part → ELSE block
+else_part → ε
+
+while_statement → WHILE LPAREN condition RPAREN block
+
+read_statement → READ LPAREN variable RPAREN SEMICOLON
+
+write_statement → WRITE LPAREN expression RPAREN SEMICOLON
+
+condition → expression rel_op expression
+
+rel_op → LT | GT | LE | GE | EQ | NE
+
+expression  → term expression'
+expression' → PLUS term expression'
+expression' → MINUS term expression'
+expression' → ε
+
+term  → factor term'
+term' → MUL factor term'
+term' → DIV factor term'
+term' → ε
+
+factor → NUMBER
+factor → variable
+factor → LPAREN expression RPAREN
+factor → function_call
+
+function_call → function_name LPAREN expression RPAREN
+
+function_name → SQRT | EXP | LOG | ARRAY
+```
