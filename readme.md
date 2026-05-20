@@ -1,7 +1,3 @@
-Make these code changes?
-readme.md
-
-md
 # Лексический анализатор
 
 ## 1. Список лексем
@@ -92,7 +88,7 @@ md
 | `H` | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | K | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* |
 | `K` | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* | Z* |
 
-> `Z*` — финальное состояние с возвратом текущего символа во входную ленту (символ принадлежит следующей лексеме)
+> `Z*` — финальное состояние с возвратом текущего символа во входную ленту (символ принадлежит следующей лексеме).
 
 ---
 
@@ -103,11 +99,11 @@ md
 | 0 | **Нет действия** | Просто переход в новое состояние, ничего не делать |
 | 1 | **Накопить символ** | Добавить текущий символ к буферу накапливаемой лексемы |
 | 2 | **Накопить и вернуть** | Добавить текущий символ к буферу, зафиксировать лексему и вернуть её |
-| 3 | **Вернуть без накопления** | Зафиксировать лексему из буфера, текущий символ вернуть во входную ленту |
-| 4 | **Определить тип: ID или ключевое слово** | Буфер содержит идентификатор — проверить таблицу ключевых слов |
+| 3 | **Вернуть без накопления** | Зафиксировать лексему из буфера, текущий символ вернуть во входную ленту (он принадлежит следующей лексеме) |
+| 4 | **Определить тип: ID или ключевое слово** | Буфер содержит идентификатор — проверить таблицу ключевых слов; если найдено — вернуть соответствующий номер лексемы (22–30), иначе вернуть `ID` (1) |
 | 5 | **Зафиксировать NUMBER** | Буфер содержит число — вернуть лексему `NUMBER` (2) |
-| 6 | **Ошибка** | Недопустимый символ в данном состоянии — выдать ошибку |
-| 7 | **Пропустить пробел** | Текущий символ — пробел / табуляция / перевод строки; если `\n` — увеличить номер строки |
+| 6 | **Ошибка** | Недопустимый символ в данном состоянии — выдать сообщение об ошибке с номером строки и позицией |
+| 7 | **Пропустить пробел** | Текущий символ — пробел / табуляция / перевод строки; буфер не трогать; если `\n` — увеличить счётчик строки |
 
 ### Привязка семантических программ к переходам
 
@@ -122,7 +118,7 @@ md
 | `S` | `<` | `E` | 1 | Начало `<` или `<=` — накопить |
 | `S` | `>` | `H` | 1 | Начало `>` или `>=` — накопить |
 | `I` | `<б>` `<ц>` | `I` | 1 | Продолжение идентификатора — накопить |
-| `I` | любой другой | `Z*` | 3 + 4 | Конец идентификатора — вернуть символ, определить тип |
+| `I` | любой другой | `Z*` | 3 + 4 | Конец идентификатора — вернуть символ, определить тип (ID или ключевое слово) |
 | `N` | `<ц>` | `N` | 1 | Продолжение целого числа — накопить |
 | `N` | `.` | `F` | 1 | Начало дробной части — накопить |
 | `N` | любой другой | `Z*` | 3 + 5 | Конец числа — вернуть символ, зафиксировать NUMBER |
@@ -141,107 +137,208 @@ md
 
 # КС-грамматика языка
 
-Исходная контекстно-свободная грамматика (до преобразований).
+Исходная контекстно-свободная грамматика. 
 
 ## Программа
 
 ```text
 program → statement_list
-Список операторов
-Text
+```
+
+## Список операторов
+
+```text
 statement_list → statement statement_list
 statement_list → ε
-Оператор
-Text
+```
+
+## Оператор
+
+```text
 statement → assignment
 statement → if_statement
 statement → while_statement
 statement → read_statement
 statement → write_statement
 statement → block
-Составной оператор (блок)
-Text
+```
+
+## Составной оператор (блок)
+
+```text
 block → LBRACE statement_list RBRACE
-Присваивание
-Text
+```
+
+## Присваивание
+
+```text
 assignment → variable ASSIGN expression SEMICOLON
-Переменная
-Text
+```
+
+## Переменная
+
+```text
 variable → ID
 variable → ID LBRACKET expression RBRACKET
-Условный оператор
-Text
+```
+
+## Условный оператор
+
+```text
 if_statement → IF LPAREN condition RPAREN block else_part
 
 else_part → ELSE block
 else_part → ε
-Оператор цикла
-Text
+```
+
+## Оператор цикла
+
+```text
 while_statement → WHILE LPAREN condition RPAREN block
-Оператор ввода
-Text
+```
+
+## Оператор ввода
+
+```text
 read_statement → READ LPAREN variable RPAREN SEMICOLON
-Оператор вывода
-Text
+```
+
+## Оператор вывода
+
+```text
 write_statement → WRITE LPAREN expression RPAREN SEMICOLON
-Условие
-Text
+```
+
+## Условие
+
+```text
 condition → expression rel_op expression
-Операции сравнения
-Text
+```
+
+## Операции сравнения
+
+```text
 rel_op → LT
 rel_op → GT
 rel_op → LE
 rel_op → GE
 rel_op → EQ
 rel_op → NE
-Выражение
-Text
+```
+## Выражение 
+
+```text
 expression → expression PLUS term
 expression → expression MINUS term
 expression → term
-Терм
-Text
+```
+
+## Терм 
+
+```text
 term → term MUL factor
 term → term DIV factor
 term → factor
-Множитель
-Text
+```
+
+## Множитель
+
+```text
 factor → NUMBER
 factor → variable
 factor → LPAREN expression RPAREN
 factor → function_call
-Вызов функции
-Text
+```
+
+## Вызов функции
+
+```text
 function_call → function_name LPAREN expression RPAREN
 
 function_name → SQRT
 function_name → EXP
 function_name → LOG
 function_name → ARRAY
-КС-грамматика без левой рекурсии
-Преобразование грамматики путем замены леворекурсивных правил вида A → A α | β на A → β A' и A' → α A' | ε.
+```
 
-Для выражений:
+---
 
-Text
-expression → term expression'
+# Устранение левой рекурсии
+
+Левая рекурсия возникает когда правило начинается само с себя — парсер уходит в бесконечный цикл ещё до чтения хоть одного токена. В данной грамматике она обнаружена в двух нетерминалах: `expression` и `term`.
+
+## Алгоритм
+
+Правила вида:
+
+```text
+A → A α₁
+A → A α₂
+A → β        ← база (не начинается с A)
+```
+
+Заменяются на:
+
+```text
+A  → β A'
+A' → α₁ A'
+A' → α₂ A'
+A' → ε
+```
+
+Вводится новый нетерминал `A'`, который берёт на себя повторяющийся хвост. База `β` идёт первой — рекурсии больше нет.
+
+---
+
+## Устранение в `expression`
+
+В исходной грамматике:
+
+```text
+expression → expression PLUS term    ← левая рекурсия
+expression → expression MINUS term   ← левая рекурсия
+expression → term                    ← база (β = term)
+```
+
+Применяем алгоритм — база `term` выносится вперёд, хвосты `PLUS term` и `MINUS term` уходят в `expression'`:
+
+```text
+expression  → term expression'
 expression' → PLUS term expression'
 expression' → MINUS term expression'
 expression' → ε
-Для термов:
+```
 
-Text
-term → factor term'
+---
+
+## Устранение в `term`
+
+В исходной грамматике:
+
+```text
+term → term MUL factor    ← левая рекурсия
+term → term DIV factor    ← левая рекурсия
+term → factor             ← база (β = factor)
+```
+
+Применяем алгоритм — база `factor` выносится вперёд, хвосты `MUL factor` и `DIV factor` уходят в `term'`:
+
+```text
+term  → factor term'
 term' → MUL factor term'
 term' → DIV factor term'
 term' → ε
-Итоговая грамматика без левой рекурсии:
+```
 
-Text
+---
+
+# Итоговая грамматика без левой рекурсии
+
+```text
 program → statement_list
 
-statement_list → statement statement_list | ε
+statement_list → statement statement_list
+statement_list → ε
 
 statement → assignment
 statement → if_statement
@@ -250,6 +347,8 @@ statement → read_statement
 statement → write_statement
 statement → block
 
+block → LBRACE statement_list RBRACE
+
 assignment → variable ASSIGN expression SEMICOLON
 
 variable → ID
@@ -257,7 +356,8 @@ variable → ID LBRACKET expression RBRACKET
 
 if_statement → IF LPAREN condition RPAREN block else_part
 
-else_part → ELSE block | ε
+else_part → ELSE block
+else_part → ε
 
 while_statement → WHILE LPAREN condition RPAREN block
 
@@ -265,19 +365,19 @@ read_statement → READ LPAREN variable RPAREN SEMICOLON
 
 write_statement → WRITE LPAREN expression RPAREN SEMICOLON
 
-block → LBRACE statement_list RBRACE
-
 condition → expression rel_op expression
 
 rel_op → LT | GT | LE | GE | EQ | NE
 
-expression → term expression'
+expression  → term expression'
+expression' → PLUS term expression'
+expression' → MINUS term expression'
+expression' → ε
 
-expression' → PLUS term expression' | MINUS term expression' | ε
-
-term → factor term'
-
-term' → MUL factor term' | DIV factor term' | ε
+term  → factor term'
+term' → MUL factor term'
+term' → DIV factor term'
+term' → ε
 
 factor → NUMBER
 factor → variable
@@ -287,147 +387,4 @@ factor → function_call
 function_call → function_name LPAREN expression RPAREN
 
 function_name → SQRT | EXP | LOG | ARRAY
-Нормальная форма Грейбах
-Преобразованная грамматика, в которой все правила начинаются с терминала или имеют вид A → ε.
-
-Используется для детерминированного синтаксического анализа (LL(1)-парсер, рекурсивный спуск).
-
-Преобразование
-Нетерминалы, начинающие правые части, заменяются на их порождающие правила.
-
-Раскрытие statement_list:
-
-Text
-statement_list → assignment statement_list
-statement_list → if_statement statement_list
-statement_list → while_statement statement_list
-statement_list → read_statement statement_list
-statement_list → write_statement statement_list
-statement_list → block statement_list
-statement_list → ε
-Раскрытие statement через операторы:
-
-Text
-statement → assignment | if_statement | while_statement | 
-            read_statement | write_statement | block
-Раскрытие variable в других правилах и терминализация assignment:
-
-Text
-assignment → ID ASSIGN expression SEMICOLON
-assignment → ID LBRACKET expression RBRACKET ASSIGN expression SEMICOLON
-Раскрытие expression в правилах:
-
-Text
-expression → NUMBER expression'
-expression → ID expression'
-expression → ID LBRACKET expression RBRACKET expression'
-expression → LPAREN expression RPAREN expression'
-expression → SQRT LPAREN expression RPAREN expression'
-expression → EXP LPAREN expression RPAREN expression'
-expression → LOG LPAREN expression RPAREN expression'
-expression → ARRAY LPAREN expression RPAREN expression'
-
-expression' → PLUS expression expression'
-expression' → MINUS expression expression'
-expression' → ε
-Условия и условные операторы:
-
-Text
-if_statement → IF LPAREN expression rel_op expression RPAREN block else_part
-while_statement → WHILE LPAREN expression rel_op expression RPAREN block
-condition → expression rel_op expression
-Все операции сравнения:
-
-Text
-rel_op → LT | GT | LE | GE | EQ | NE
-Итоговая грамматика в нормальной форме Грейбах
-Text
-program → ID statement_list
-program → NUMBER statement_list
-program → IF statement_list
-program → WHILE statement_list
-program → READ statement_list
-program → WRITE statement_list
-program → LBRACE statement_list
-program → SQRT statement_list
-program → EXP statement_list
-program → LOG statement_list
-program → ARRAY statement_list
-
-statement_list → ID statement_list
-statement_list → IF statement_list
-statement_list → WHILE statement_list
-statement_list → READ statement_list
-statement_list → WRITE statement_list
-statement_list → LBRACE statement_list
-statement_list → SQRT statement_list
-statement_list → EXP statement_list
-statement_list → LOG statement_list
-statement_list → ARRAY statement_list
-statement_list → ε
-
-assignment → ID ASSIGN expression SEMICOLON
-assignment → ID LBRACKET expression RBRACKET ASSIGN expression SEMICOLON
-
-variable → ID
-variable → ID LBRACKET expression RBRACKET
-
-if_statement → IF LPAREN expression rel_op expression RPAREN LBRACE statement_list RBRACE else_part
-
-else_part → ELSE LBRACE statement_list RBRACE
-else_part → ε
-
-while_statement → WHILE LPAREN expression rel_op expression RPAREN LBRACE statement_list RBRACE
-
-read_statement → READ LPAREN ID RPAREN SEMICOLON
-read_statement → READ LPAREN ID LBRACKET expression RBRACKET RPAREN SEMICOLON
-
-write_statement → WRITE LPAREN expression RPAREN SEMICOLON
-
-block → LBRACE statement_list RBRACE
-
-expression → NUMBER expression'
-expression → ID expression'
-expression → ID LBRACKET expression RBRACKET expression'
-expression → LPAREN expression RPAREN expression'
-expression → SQRT LPAREN expression RPAREN expression'
-expression → EXP LPAREN expression RPAREN expression'
-expression → LOG LPAREN expression RPAREN expression'
-expression → ARRAY LPAREN expression RPAREN expression'
-
-expression' → PLUS expression expression'
-expression' → MINUS expression expression'
-expression' → ε
-
-term → NUMBER term'
-term → ID term'
-term → ID LBRACKET expression RBRACKET term'
-term → LPAREN expression RPAREN term'
-term → SQRT LPAREN expression RPAREN term'
-term → EXP LPAREN expression RPAREN term'
-term → LOG LPAREN expression RPAREN term'
-term → ARRAY LPAREN expression RPAREN term'
-
-term' → MUL term term'
-term' → DIV term term'
-term' → ε
-
-factor → NUMBER
-factor → ID
-factor → ID LBRACKET expression RBRACKET
-factor → LPAREN expression RPAREN
-factor → SQRT LPAREN expression RPAREN
-factor → EXP LPAREN expression RPAREN
-factor → LOG LPAREN expression RPAREN
-factor → ARRAY LPAREN expression RPAREN
-
-function_call → SQRT LPAREN expression RPAREN
-function_call → EXP LPAREN expression RPAREN
-function_call → LOG LPAREN expression RPAREN
-function_call → ARRAY LPAREN expression RPAREN
-
-function_name → SQRT | EXP | LOG | ARRAY
-
-rel_op → LT | GT | LE | GE | EQ | NE
-
-condition → expression rel_op expression
+```
