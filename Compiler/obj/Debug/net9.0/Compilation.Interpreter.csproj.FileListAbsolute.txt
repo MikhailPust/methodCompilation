@@ -1,0 +1,14 @@
+C:\методы компиляции\проект\Compiler-main\bin\Debug\net9.0\Compilation.Interpreter.exe
+C:\методы компиляции\проект\Compiler-main\bin\Debug\net9.0\Compilation.Interpreter.deps.json
+C:\методы компиляции\проект\Compiler-main\bin\Debug\net9.0\Compilation.Interpreter.runtimeconfig.json
+C:\методы компиляции\проект\Compiler-main\bin\Debug\net9.0\Compilation.Interpreter.dll
+C:\методы компиляции\проект\Compiler-main\bin\Debug\net9.0\Compilation.Interpreter.pdb
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.AssemblyInfoInputs.cache
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.AssemblyInfo.cs
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.csproj.CoreCompileInputs.cache
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.dll
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\refint\Compilation.Interpreter.dll
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.pdb
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\Compilation.Interpreter.genruntimeconfig.cache
+C:\методы компиляции\проект\Compiler-main\obj\Debug\net9.0\ref\Compilation.Interpreter.dll
