@@ -133,15 +133,19 @@ public sealed class Interpreter
                 {
                     var item = _stack.Pop();
                     double val;
+
                     while (true)
                     {
-                        Console.Write($"Введите {_varTable.GetName(item.VarIndex)}: ");
+                     
+                        Console.Write("> ");
                         var input = Console.ReadLine();
+
                         if (double.TryParse(input,
                             System.Globalization.NumberStyles.Any,
                             System.Globalization.CultureInfo.InvariantCulture,
                             out val))
                             break;
+
                         Console.WriteLine("Ошибка: введите число");
                     }
 
