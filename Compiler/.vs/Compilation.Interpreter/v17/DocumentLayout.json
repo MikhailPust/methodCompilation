@@ -1,74 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\",
+  "WorkspaceRootPath": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\interpreter\\interpreter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:interpreter\\interpreter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\models\\opcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\models\\opcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\compilation.interpreter.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:compilation.interpreter.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\labelstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\labelstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\tables\\constanttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\tables\\constanttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\tables\\variabletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\tables\\variabletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\models\\opselement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\models\\opselement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\parser\\models\\opselementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\models\\opselementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\models\\opselementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\models\\charclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\charclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\models\\opselement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\models\\opselement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\models\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\models\\opcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\models\\opcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\interpreter\\interpreter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:interpreter\\interpreter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\models\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\lexercharclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\lexercharclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\tables\\constanttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\tables\\constanttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\dfatransitiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\dfatransitiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\dfatransitiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler-main\\lexer\\lexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\lexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\lexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\lexercharclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\lexercharclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\models\\charclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\charclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\models\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\models\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\lexer\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:lexer\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\tables\\variabletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\tables\\variabletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\parser\\labelstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:parser\\labelstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|c:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\compiler\\compilation.interpreter.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BD31FBCE-7201-4168-AF00-39662B1F94D0}|Compilation.Interpreter.csproj|solutionrelative:compilation.interpreter.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,37 +90,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Interpreter.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Interpreter\\Interpreter.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Interpreter\\Interpreter.cs",
               "RelativeDocumentMoniker": "Interpreter\\Interpreter.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Interpreter\\Interpreter.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Interpreter\\Interpreter.cs",
               "RelativeToolTip": "Interpreter\\Interpreter.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAApwJQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAlwC0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T18:25:05.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Parser.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Parser.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Parser.cs",
               "RelativeDocumentMoniker": "Parser\\Parser.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Parser.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Parser.cs",
               "RelativeToolTip": "Parser\\Parser.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAgwKUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAANkAAAAAAAAAAAAkwOQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T18:22:57.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "LabelStack.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\LabelStack.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\LabelStack.cs",
               "RelativeDocumentMoniker": "Parser\\LabelStack.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\LabelStack.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\LabelStack.cs",
               "RelativeToolTip": "Parser\\LabelStack.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -130,21 +130,22 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "ConstantTable.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Tables\\ConstantTable.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Tables\\ConstantTable.cs",
               "RelativeDocumentMoniker": "Parser\\Tables\\ConstantTable.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Tables\\ConstantTable.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Tables\\ConstantTable.cs",
               "RelativeToolTip": "Parser\\Tables\\ConstantTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBgAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T18:21:47.83Z"
+              "WhenOpened": "2026-05-23T18:21:47.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "VariableTable.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Tables\\VariableTable.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Tables\\VariableTable.cs",
               "RelativeDocumentMoniker": "Parser\\Tables\\VariableTable.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Tables\\VariableTable.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Tables\\VariableTable.cs",
               "RelativeToolTip": "Parser\\Tables\\VariableTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -152,61 +153,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "OpsElement.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Models\\OpsElement.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Models\\OpsElement.cs",
               "RelativeDocumentMoniker": "Parser\\Models\\OpsElement.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Models\\OpsElement.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Models\\OpsElement.cs",
               "RelativeToolTip": "Parser\\Models\\OpsElement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T18:16:47.1Z"
+              "WhenOpened": "2026-05-23T18:16:47.1Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "OpCode.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Models\\OpCode.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Models\\OpCode.cs",
               "RelativeDocumentMoniker": "Parser\\Models\\OpCode.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Models\\OpCode.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Models\\OpCode.cs",
               "RelativeToolTip": "Parser\\Models\\OpCode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T18:16:11.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "OpsElementType.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Models\\OpsElementType.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Models\\OpsElementType.cs",
               "RelativeDocumentMoniker": "Parser\\Models\\OpsElementType.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Parser\\Models\\OpsElementType.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Parser\\Models\\OpsElementType.cs",
               "RelativeToolTip": "Parser\\Models\\OpsElementType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T18:14:47.857Z"
+              "WhenOpened": "2026-05-23T18:14:47.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Program.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Program.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAwJoAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T10:47:17.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "Compilation.Interpreter.csproj",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Compilation.Interpreter.csproj",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Compilation.Interpreter.csproj",
               "RelativeDocumentMoniker": "Compilation.Interpreter.csproj",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Compilation.Interpreter.csproj",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Compilation.Interpreter.csproj",
               "RelativeToolTip": "Compilation.Interpreter.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -214,11 +217,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Token.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\Token.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\Token.cs",
               "RelativeDocumentMoniker": "Lexer\\Models\\Token.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\Token.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\Token.cs",
               "RelativeToolTip": "Lexer\\Models\\Token.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -226,13 +229,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "TokenType.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\TokenType.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\TokenType.cs",
               "RelativeDocumentMoniker": "Lexer\\Models\\TokenType.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\TokenType.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\TokenType.cs",
               "RelativeToolTip": "Lexer\\Models\\TokenType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T10:47:44.617Z"
             },
@@ -240,9 +243,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "State.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\State.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\State.cs",
               "RelativeDocumentMoniker": "Lexer\\Models\\State.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\State.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\State.cs",
               "RelativeToolTip": "Lexer\\Models\\State.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -252,47 +255,47 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "CharClass.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\CharClass.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\CharClass.cs",
               "RelativeDocumentMoniker": "Lexer\\Models\\CharClass.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Models\\CharClass.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Models\\CharClass.cs",
               "RelativeToolTip": "Lexer\\Models\\CharClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T10:47:40.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
               "Title": "LexerCharClassifier.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\LexerCharClassifier.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\LexerCharClassifier.cs",
               "RelativeDocumentMoniker": "Lexer\\LexerCharClassifier.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\LexerCharClassifier.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\LexerCharClassifier.cs",
               "RelativeToolTip": "Lexer\\LexerCharClassifier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T10:47:16.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 8,
               "Title": "Lexer.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Lexer.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Lexer.cs",
               "RelativeDocumentMoniker": "Lexer\\Lexer.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\Lexer.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\Lexer.cs",
               "RelativeToolTip": "Lexer\\Lexer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T10:46:28.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 7,
               "Title": "DfaTransitionTable.cs",
-              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\DfaTransitionTable.cs",
+              "DocumentMoniker": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\DfaTransitionTable.cs",
               "RelativeDocumentMoniker": "Lexer\\DfaTransitionTable.cs",
-              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler-main\\Lexer\\DfaTransitionTable.cs",
+              "ToolTip": "C:\\\u043C\u0435\u0442\u043E\u0434\u044B \u043A\u043E\u043C\u043F\u0438\u043B\u044F\u0446\u0438\u0438\\\u043F\u0440\u043E\u0435\u043A\u0442\\Compiler\\Lexer\\DfaTransitionTable.cs",
               "RelativeToolTip": "Lexer\\DfaTransitionTable.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAuwDwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T10:47:11.87Z"
             }

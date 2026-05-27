@@ -1,9 +1,8 @@
-﻿namespace Compilation.Interpreter.Lexer.Models;
-
-public enum TokenType
+﻿public enum TokenType
 {
     ID,
     NUMBER,
+    STRING,    
 
     PLUS,
     MINUS,

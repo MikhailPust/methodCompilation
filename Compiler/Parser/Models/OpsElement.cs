@@ -25,11 +25,14 @@ public sealed class OpsElement
 
     public static OpsElement Label(int address) =>
         new(OpsElementType.TYPE_LABEL, address);
+    public static OpsElement StrConst(int index) =>
+    new(OpsElementType.TYPE_STR_CONST, index);
 
     public override string ToString() => Type switch
     {
         OpsElementType.TYPE_VAR => $"VAR({Value})",
         OpsElementType.TYPE_CONST => $"CONST({Value})",
+        OpsElementType.TYPE_STR_CONST => $"STR_CONST({Value})", // <--- ДОБАВЛЕНО
         OpsElementType.TYPE_LABEL => $"LABEL({Value})",
         OpsElementType.TYPE_OP => $"{Value}",
         _ => Value.ToString()!

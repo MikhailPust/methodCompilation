@@ -222,12 +222,23 @@ public sealed class Parser
     {
         Expect(TokenType.WRITE);
         Expect(TokenType.LPAREN);
-        ParseExpression();
-        Emit(OpsElement.Op(OpCode.OP_WRITE));
+
+        if (Current.Type == TokenType.STRING)
+        {
+            var strIndex = _constTable.AddOrGetString(Current.Value);
+            Emit(OpsElement.StrConst(strIndex)); 
+            Consume();
+            Emit(OpsElement.Op(OpCode.OP_WRITE_STR));
+        }
+        else
+        {
+            ParseExpression();
+            Emit(OpsElement.Op(OpCode.OP_WRITE));
+        }
+
         Expect(TokenType.RPAREN);
         Expect(TokenType.SEMICOLON);
     }
-
     private void ParseBlock()
     {
         Expect(TokenType.LBRACE);

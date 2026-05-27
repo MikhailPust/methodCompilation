@@ -28,6 +28,6 @@ public enum OpCode
     OP_SQRT,   // sqrt
     OP_EXP,    // exp
     OP_LOG,     // log
-    OP_ARRAY
-
+    OP_ARRAY,
+    OP_WRITE_STR  // вывод строки
 }

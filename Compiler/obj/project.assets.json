@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\методы компиляции\\проект\\Compiler-main\\Compilation.Interpreter.csproj",
+      "projectUniqueName": "C:\\методы компиляции\\проект\\Compiler\\Compilation.Interpreter.csproj",
       "projectName": "Compilation.Interpreter",
-      "projectPath": "C:\\методы компиляции\\проект\\Compiler-main\\Compilation.Interpreter.csproj",
+      "projectPath": "C:\\методы компиляции\\проект\\Compiler\\Compilation.Interpreter.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\методы компиляции\\проект\\Compiler-main\\obj\\",
+      "outputPath": "C:\\методы компиляции\\проект\\Compiler\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

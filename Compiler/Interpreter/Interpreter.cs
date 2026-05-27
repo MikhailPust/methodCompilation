@@ -43,6 +43,10 @@ public sealed class Interpreter
                     _stack.Push(StackItem.Val(_constTable.GetValue((int)el.Value)));
                     break;
 
+                case OpsElementType.TYPE_STR_CONST: 
+                    _stack.Push(StackItem.Val((int)el.Value)); // Просто кладем индекс на стек
+                    break;
+
                 case OpsElementType.TYPE_LABEL:
                     _stack.Push(StackItem.Val((int)el.Value));
                     break;
@@ -150,6 +154,12 @@ public sealed class Interpreter
             case OpCode.OP_WRITE:
                 {
                     Console.WriteLine(PopValue());
+                    break;
+                }
+            case OpCode.OP_WRITE_STR:
+                {
+                    var idx = (int)PopValue();
+                    Console.WriteLine(_constTable.GetString(idx));
                     break;
                 }
             case OpCode.OP_LT:

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f4Nz25ctRq4=",
+  "dgSpecHash": "j3ZHAdxn7GQ=",
   "success": true,
-  "projectFilePath": "C:\\методы компиляции\\проект\\Compiler-main\\Compilation.Interpreter.csproj",
+  "projectFilePath": "C:\\методы компиляции\\проект\\Compiler\\Compilation.Interpreter.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

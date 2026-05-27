@@ -1,11 +1,10 @@
-﻿namespace Compilation.Interpreter.Lexer.Models;
-
-public enum CharClass
+﻿public enum CharClass
 {
     Letter,
     Digit,
     Dot,
     WhiteSpace,
+    Quote,        
     Plus,
     Minus,
     Star,

@@ -1,9 +1,9 @@
 ﻿using Compilation.Interpreter.Lexer.Models;
 
 namespace Compilation.Interpreter.Lexer;
-
 public static class LexerCharClassifier
 {
+
     public static CharClass GetCharClass(char c)
     {
         if (char.IsLetter(c)) return CharClass.Letter;
@@ -13,6 +13,7 @@ public static class LexerCharClassifier
         {
             '.' => CharClass.Dot,
             ' ' or '\t' or '\r' or '\n' => CharClass.WhiteSpace,
+            '"' => CharClass.Quote,
             '+' => CharClass.Plus,
             '-' => CharClass.Minus,
             '*' => CharClass.Star,

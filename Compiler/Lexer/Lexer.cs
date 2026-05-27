@@ -37,6 +37,26 @@ public sealed class Lexer
                 continue;
             }
 
+            // строковый литерал
+            if (state == State.S && charClass == CharClass.Quote)
+            {
+                Advance(c); // пропускаем открывающую кавычку
+                while (true)
+                {
+                    var sc = PeekChar();
+                    if (sc == '\0')
+                        throw new Exception($"Ошибка: строка {_line}, позиция {_column} — незакрытая строка");
+                    if (sc == '"')
+                    {
+                        Advance(sc); // пропускаем закрывающую кавычку
+                        break;
+                    }
+                    buffer.Append(sc);
+                    Advance(sc);
+                }
+                return new Token(TokenType.STRING, buffer.ToString(), tokenLine, tokenColumn);
+            }
+
             if (charClass == CharClass.EOF)
                 return new Token(TokenType.EOF, string.Empty, _line, _column);
 
@@ -49,7 +69,6 @@ public sealed class Lexer
 
             if (nextState == State.ERR)
             {
-                // конец многосимвольной лексемы — возврат символа во входную ленту
                 if (IsReturnState(state))
                     return BuildToken(state, buffer.ToString(), tokenLine, tokenColumn);
 
@@ -72,12 +91,10 @@ public sealed class Lexer
         }
     }
 
-    // состояния, из которых при ERR лексема завершается с возвратом символа
     private static bool IsReturnState(State s) => s is
         State.I or State.N or State.F or
         State.A or State.E or State.H;
 
-    // двухсимвольные финальные состояния
     private static bool IsFinalTwoCharState(State s) => s is
         State.B or State.D or State.G or State.K;
 
@@ -99,7 +116,6 @@ public sealed class Lexer
         };
     }
 
-    // проверяем таблицу ключевых слов
     private static Token BuildKeywordOrId(string value, int line, int col)
     {
         TokenType type = value switch
@@ -115,7 +131,6 @@ public sealed class Lexer
             "array" => TokenType.ARRAY,
             _ => TokenType.ID
         };
-
         return new Token(type, value, line, col);
     }
 
@@ -137,7 +152,6 @@ public sealed class Lexer
             ',' => TokenType.COMMA,
             _ => throw new Exception($"Неизвестный символ: '{c}'")
         };
-
         return new Token(type, c.ToString(), line, col);
     }
 
