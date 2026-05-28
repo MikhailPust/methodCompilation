@@ -214,8 +214,10 @@ read_statement → READ LPAREN variable RPAREN SEMICOLON
 ## Оператор вывода
 
 ```text
-write_statement → WRITE LPAREN expression RPAREN SEMICOLON
-write_statement → WRITE LPAREN STRING RPAREN SEMICOLON
+write_statement → WRITE LPAREN write_arg { COMMA write_arg } RPAREN SEMICOLON
+
+write_arg → expression
+write_arg → STRING
 ```
 
 ## Условие
@@ -372,8 +374,10 @@ while_statement → WHILE LPAREN condition RPAREN block
 
 read_statement → READ LPAREN variable RPAREN SEMICOLON
 
-write_statement → WRITE LPAREN expression RPAREN SEMICOLON
-write_statement → WRITE LPAREN STRING RPAREN SEMICOLON
+write_statement → WRITE LPAREN write_arg { COMMA write_arg } RPAREN SEMICOLON
+
+write_arg → expression
+write_arg → STRING
 
 condition → expression rel_op expression
 
@@ -439,8 +443,7 @@ statement → ID LBRACKET expression RBRACKET ASSIGN expression SEMICOLON
 statement → IF LPAREN condition RPAREN block else_part
 statement → WHILE LPAREN condition RPAREN block
 statement → READ LPAREN ID read_tail RPAREN SEMICOLON
-statement → WRITE LPAREN expression RPAREN SEMICOLON
-statement → WRITE LPAREN STRING RPAREN SEMICOLON
+statement → WRITE LPAREN write_arg { COMMA write_arg } RPAREN SEMICOLON
 statement → LBRACE statement_list RBRACE
 
 statement_tail → ASSIGN expression SEMICOLON
@@ -540,6 +543,7 @@ term_var_tail → term'
 | `r` | Записать в ОПС операцию ввода |
 | `w` | Записать в ОПС операцию вывода числа |
 | `ws` | Записать в ОПС операцию вывода строки |
+| `wln` | Записать в ОПС операцию перевода строки |
 | `1`–`5` | Выполнить соответствующую семантическую программу |
 
 ## Семантические программы 1–5
@@ -640,8 +644,9 @@ term_var_tail → term'
 |------------|-------------|--------------|
 | `read_statement` | `READ LPAREN ID RPAREN SEMICOLON` | `□ □ a r □` |
 | `read_statement` | `READ LPAREN ID LBRACKET expression RBRACKET RPAREN SEMICOLON` | `□ □ a □ □ i r □` |
-| `write_statement` | `WRITE LPAREN expression RPAREN SEMICOLON` | `□ □ □ w □` |
-| `write_statement` | `WRITE LPAREN STRING RPAREN SEMICOLON` | `□ □ ks ws □` |
+| `write_statement` | `WRITE LPAREN write_arg { COMMA write_arg } RPAREN SEMICOLON` | `□ □ □ { □ □ } wln □` |
+| `write_arg` | `expression` | `w` |
+| `write_arg` | `STRING` | `ks ws` |
 
 ### Составной оператор (блок)
 
@@ -675,9 +680,10 @@ term_var_tail → term'
 | 16 | Ввод | `r` | 1 |
 | 17 | Вывод числа | `w` | 1 |
 | 18 | Вывод строки | `ws` | 1 |
-| 19 | Квадратный корень | `sqrt` | 1 |
-| 20 | Экспонента | `exp` | 1 |
-| 21 | Натуральный логарифм | `log` | 1 |
+| 19 | Перевод строки | `wln` | 0 |
+| 20 | Квадратный корень | `sqrt` | 1 |
+| 21 | Экспонента | `exp` | 1 |
+| 22 | Натуральный логарифм | `log` | 1 |
 
 ---
 
