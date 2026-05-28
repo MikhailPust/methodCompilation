@@ -34,6 +34,7 @@ write(a / b);
 write(sqrt(a));
 write(exp(1));
 write(log(a));
+write("a= ", a);
 """);
 
 // ТЕСТ 2 — Условный оператор if-else

@@ -15,6 +15,7 @@ public sealed class Lexer
         _source = source;
     }
 
+    // прочитать и вернуть следующий токен из входного потока
     public Token NextToken()
     {
         var state = State.S;
@@ -28,7 +29,6 @@ public sealed class Lexer
             var charClass = LexerCharClassifier.GetCharClass(c);
             var nextState = DfaTransitionTable.GetNextState(state, charClass);
 
-            // пропуск пробелов
             if (state == State.S && charClass == CharClass.WhiteSpace)
             {
                 Advance(c);
@@ -37,10 +37,9 @@ public sealed class Lexer
                 continue;
             }
 
-            // строковый литерал
             if (state == State.S && charClass == CharClass.Quote)
             {
-                Advance(c); // пропускаем открывающую кавычку
+                Advance(c);
                 while (true)
                 {
                     var sc = PeekChar();
@@ -48,7 +47,7 @@ public sealed class Lexer
                         throw new Exception($"Ошибка: строка {_line}, позиция {_column} — незакрытая строка");
                     if (sc == '"')
                     {
-                        Advance(sc); // пропускаем закрывающую кавычку
+                        Advance(sc);
                         break;
                     }
                     buffer.Append(sc);
@@ -60,7 +59,6 @@ public sealed class Lexer
             if (charClass == CharClass.EOF)
                 return new Token(TokenType.EOF, string.Empty, _line, _column);
 
-            // односимвольная лексема
             if (state == State.S && nextState == State.Z)
             {
                 Advance(c);
@@ -76,7 +74,6 @@ public sealed class Lexer
                     $"Ошибка: строка {_line}, позиция {_column} — недопустимый символ '{c}'");
             }
 
-            // двухсимвольный финал (==, !=, <=, >=)
             if (IsFinalTwoCharState(nextState))
             {
                 buffer.Append(c);
@@ -84,7 +81,6 @@ public sealed class Lexer
                 return BuildToken(nextState, buffer.ToString(), tokenLine, tokenColumn);
             }
 
-            // накапливаем символ
             state = nextState;
             buffer.Append(c);
             Advance(c);
@@ -98,6 +94,7 @@ public sealed class Lexer
     private static bool IsFinalTwoCharState(State s) => s is
         State.B or State.D or State.G or State.K;
 
+    // построить токен по финальному состоянию ДКА и накопленному буферу
     private static Token BuildToken(State state, string value, int line, int col)
     {
         return state switch
@@ -116,6 +113,7 @@ public sealed class Lexer
         };
     }
 
+    // определить тип идентификатора
     private static Token BuildKeywordOrId(string value, int line, int col)
     {
         TokenType type = value switch
@@ -134,6 +132,7 @@ public sealed class Lexer
         return new Token(type, value, line, col);
     }
 
+    // построить токен для односимвольной лексемы
     private static Token BuildSingleCharToken(char c, int line, int col)
     {
         TokenType type = c switch
@@ -155,6 +154,7 @@ public sealed class Lexer
         return new Token(type, c.ToString(), line, col);
     }
 
+   
     private char PeekChar() =>
         _position < _source.Length ? _source[_position] : '\0';
 

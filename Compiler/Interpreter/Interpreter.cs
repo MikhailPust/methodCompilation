@@ -16,6 +16,7 @@ public sealed class Interpreter
 
     private int _ip = 0;
 
+    // принять ОПС и таблицы от парсера
     public Interpreter(
         List<OpsElement> ops,
         VariableTable varTable,
@@ -26,6 +27,7 @@ public sealed class Interpreter
         _constTable = constTable;
     }
 
+    // главный цикл исполнения: читать элементы ОПС по указателю _ip
     public void Run()
     {
         while (_ip < _ops.Count)
@@ -43,8 +45,8 @@ public sealed class Interpreter
                     _stack.Push(StackItem.Val(_constTable.GetValue((int)el.Value)));
                     break;
 
-                case OpsElementType.TYPE_STR_CONST: 
-                    _stack.Push(StackItem.Val((int)el.Value)); // Просто кладем индекс на стек
+                case OpsElementType.TYPE_STR_CONST:
+                    _stack.Push(StackItem.Val((int)el.Value));
                     break;
 
                 case OpsElementType.TYPE_LABEL:
@@ -58,6 +60,7 @@ public sealed class Interpreter
         }
     }
 
+    // выполнить одну операцию ОПС
     private void ExecuteOp(OpCode op)
     {
         switch (op)
@@ -133,19 +136,15 @@ public sealed class Interpreter
                 {
                     var item = _stack.Pop();
                     double val;
-
                     while (true)
                     {
-                     
-                        Console.Write("> ");
+                        Console.Write($"Введите {_varTable.GetName(item.VarIndex)}: ");
                         var input = Console.ReadLine();
-
                         if (double.TryParse(input,
                             System.Globalization.NumberStyles.Any,
                             System.Globalization.CultureInfo.InvariantCulture,
                             out val))
                             break;
-
                         Console.WriteLine("Ошибка: введите число");
                     }
 
@@ -157,13 +156,18 @@ public sealed class Interpreter
                 }
             case OpCode.OP_WRITE:
                 {
-                    Console.WriteLine(PopValue());
+                    Console.Write(PopValue());
                     break;
                 }
             case OpCode.OP_WRITE_STR:
                 {
                     var idx = (int)PopValue();
-                    Console.WriteLine(_constTable.GetString(idx));
+                    Console.Write(_constTable.GetString(idx));
+                    break;
+                }
+            case OpCode.OP_WRITELN:
+                {
+                    Console.WriteLine();
                     break;
                 }
             case OpCode.OP_LT:
@@ -249,10 +253,8 @@ public sealed class Interpreter
             ArrayKey = arrayKey;
             RawValue = raw;
         }
-
         public static StackItem Ref(int varIndex) =>
             new(true, false, varIndex, 0, 0);
-
         public static StackItem ArrayRef(int varIndex, int arrIndex) =>
             new(false, true, varIndex, (long)varIndex * 100000 + arrIndex, 0);
 

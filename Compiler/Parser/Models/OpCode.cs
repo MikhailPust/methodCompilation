@@ -29,5 +29,6 @@ public enum OpCode
     OP_EXP,    // exp
     OP_LOG,     // log
     OP_ARRAY,
+    OP_WRITELN,
     OP_WRITE_STR  // вывод строки
 }

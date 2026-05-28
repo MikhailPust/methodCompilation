@@ -5,6 +5,7 @@ public sealed class ConstantTable
     private readonly List<double> _constants = new();
     private readonly List<string> _strings = new();
 
+    // добавить числовую константу 
     public int AddOrGet(double value)
     {
         var index = _constants.IndexOf(value);
@@ -13,6 +14,7 @@ public sealed class ConstantTable
         return _constants.Count - 1;
     }
 
+    // добавить строковую константу 
     public int AddOrGetString(string value)
     {
         var index = _strings.IndexOf(value);
@@ -23,6 +25,7 @@ public sealed class ConstantTable
 
     public double GetValue(int index) => _constants[index];
     public string GetString(int index) => _strings[index];
+
     public int Count => _constants.Count;
 
     public void Print()

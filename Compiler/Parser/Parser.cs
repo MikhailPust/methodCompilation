@@ -14,6 +14,7 @@ public sealed class Parser
 
     private int _pos = 0;
 
+    // принять список токенов от лексера
     public Parser(List<Token> tokens)
     {
         _tokens = tokens;
@@ -22,15 +23,16 @@ public sealed class Parser
     public List<OpsElement> Ops => _ops;
     public VariableTable VarTable => _varTable;
     public ConstantTable ConstTable => _constTable;
-
     public void Parse()
     {
         ParseStatementList();
         Expect(TokenType.EOF);
     }
 
+    // посмотреть текущий токен без потребления
     private Token Current => _tokens[_pos];
 
+    // потребить текущий токен и вернуть его
     private Token Consume()
     {
         var t = _tokens[_pos];
@@ -38,6 +40,7 @@ public sealed class Parser
         return t;
     }
 
+    // потребить токен ожидаемого типа, иначе бросить синтаксическую ошибку
     private Token Expect(TokenType type)
     {
         if (Current.Type != type)
@@ -47,8 +50,10 @@ public sealed class Parser
         return Consume();
     }
 
+    // текущий размер ОПС 
     private int K => _ops.Count;
 
+    // добавить элемент в конец ОПС
     private void Emit(OpsElement el) => _ops.Add(el);
 
     // СП 1 — после условия if/while
@@ -69,20 +74,20 @@ public sealed class Parser
         Emit(OpsElement.Op(OpCode.OP_J));
     }
 
-    // СП 3 — конец if/if-else
+    // СП 3 — конец if/if-else: заполняет последнюю метку текущим адресом
     private void Sem3()
     {
         var labelAddr = _labelStack.Pop();
         _ops[labelAddr].Value = K;
     }
 
-    // СП 4 — перед условием while
+    // СП 4 — перед условием while: запоминает адрес начала цикла
     private void Sem4()
     {
         _labelStack.Push(K);
     }
 
-    // СП 5 — после тела while
+    // СП 5 — после тела while: заполняет метку jf, кладёт обратный переход к началу цикла
     private void Sem5()
     {
         var jfLabelAddr = _labelStack.Pop();
@@ -92,6 +97,7 @@ public sealed class Parser
         Emit(OpsElement.Op(OpCode.OP_J));
     }
 
+    // разобрать список операторов пока встречаются начала операторов
     private void ParseStatementList()
     {
         while (Current.Type is
@@ -106,6 +112,7 @@ public sealed class Parser
         }
     }
 
+    // выбрать и разобрать один оператор по первому токену
     private void ParseStatement()
     {
         switch (Current.Type)
@@ -123,6 +130,7 @@ public sealed class Parser
         }
     }
 
+    // разобрать оператор присваивания (скалярного или индексного) и array(n)
     private void ParseAssignment()
     {
         var name = Expect(TokenType.ID).Value;
@@ -144,11 +152,10 @@ public sealed class Parser
         {
             Expect(TokenType.ASSIGN);
 
-            // array(n) — особый случай, передаём varIndex в стек до вызова
             if (Current.Type == TokenType.ARRAY)
             {
                 Emit(OpsElement.Var(varIndex));
-                Consume(); // array
+                Consume();
                 Expect(TokenType.LPAREN);
                 ParseExpression();
                 Expect(TokenType.RPAREN);
@@ -165,6 +172,7 @@ public sealed class Parser
         }
     }
 
+    // разобрать условный оператор if с опциональным else
     private void ParseIf()
     {
         Expect(TokenType.IF);
@@ -184,6 +192,7 @@ public sealed class Parser
         Sem3();
     }
 
+    // разобрать цикл while
     private void ParseWhile()
     {
         Expect(TokenType.WHILE);
@@ -196,6 +205,7 @@ public sealed class Parser
         Sem5();
     }
 
+    // разобрать оператор ввода read (скалярного или индексного)
     private void ParseRead()
     {
         Expect(TokenType.READ);
@@ -218,15 +228,32 @@ public sealed class Parser
         Expect(TokenType.SEMICOLON);
     }
 
+    // разобрать оператор вывода write с одним или несколькими аргументами
     private void ParseWrite()
     {
         Expect(TokenType.WRITE);
         Expect(TokenType.LPAREN);
 
+        ParseWriteArg();
+
+        while (Current.Type == TokenType.COMMA)
+        {
+            Consume();
+            ParseWriteArg();
+        }
+
+        Emit(OpsElement.Op(OpCode.OP_WRITELN));
+        Expect(TokenType.RPAREN);
+        Expect(TokenType.SEMICOLON);
+    }
+
+    // разобрать один аргумент write — строку или выражение
+    private void ParseWriteArg()
+    {
         if (Current.Type == TokenType.STRING)
         {
             var strIndex = _constTable.AddOrGetString(Current.Value);
-            Emit(OpsElement.StrConst(strIndex)); 
+            Emit(OpsElement.StrConst(strIndex));
             Consume();
             Emit(OpsElement.Op(OpCode.OP_WRITE_STR));
         }
@@ -235,10 +262,9 @@ public sealed class Parser
             ParseExpression();
             Emit(OpsElement.Op(OpCode.OP_WRITE));
         }
-
-        Expect(TokenType.RPAREN);
-        Expect(TokenType.SEMICOLON);
     }
+
+    // разобрать блок операторов в фигурных скобках
     private void ParseBlock()
     {
         Expect(TokenType.LBRACE);
@@ -246,6 +272,7 @@ public sealed class Parser
         Expect(TokenType.RBRACE);
     }
 
+    // разобрать условие: левое выражение, оператор сравнения, правое выражение
     private void ParseCondition()
     {
         ParseExpression();
@@ -254,6 +281,7 @@ public sealed class Parser
         Emit(OpsElement.Op(op));
     }
 
+    // потребить оператор сравнения и вернуть соответствующий OpCode
     private OpCode ParseRelOp()
     {
         var type = Current.Type;
@@ -272,12 +300,14 @@ public sealed class Parser
         };
     }
 
+    // разобрать выражение: терм и хвост со сложением/вычитанием
     private void ParseExpression()
     {
         ParseTerm();
         ParseExpressionTail();
     }
 
+    // разобрать хвост выражения: повторяющиеся +/- term
     private void ParseExpressionTail()
     {
         while (Current.Type is TokenType.PLUS or TokenType.MINUS)
@@ -289,12 +319,14 @@ public sealed class Parser
         }
     }
 
+    // разобрать терм: множитель и хвост с умножением/делением
     private void ParseTerm()
     {
         ParseFactor();
         ParseTermTail();
     }
 
+    // разобрать хвост терма: повторяющиеся */ factor
     private void ParseTermTail()
     {
         while (Current.Type is TokenType.MUL or TokenType.DIV)
@@ -306,6 +338,7 @@ public sealed class Parser
         }
     }
 
+    // разобрать множитель: число, переменная, скобки, унарный минус, функция
     private void ParseFactor()
     {
         switch (Current.Type)
@@ -363,6 +396,7 @@ public sealed class Parser
         }
     }
 
+    // разобрать вызов встроенной функции: имя ( выражение )
     private void ParseFunctionCall()
     {
         var op = Current.Type switch
